@@ -1,4 +1,4 @@
-package Teoría;
+package ProgramacionEstructurada.Teoría;
 
 public class a1_1Ejemplo2 {
 

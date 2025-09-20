@@ -1,4 +1,4 @@
-package Teoría;
+package ProgramacionEstructurada.Teoría;
 
 public class a2ArithmeticDemo {
     public static void main(String[] args) {

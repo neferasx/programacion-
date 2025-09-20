@@ -1,4 +1,4 @@
-package Teoría;
+package ProgramacionEstructurada.Teoría;
 
 import java.util.Scanner;
 

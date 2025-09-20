@@ -1,4 +1,4 @@
-package Teoría;
+package ProgramacionEstructurada.Teoría;
 
 public class a7ComparisonDemo {
     public static void main(String[] args){
