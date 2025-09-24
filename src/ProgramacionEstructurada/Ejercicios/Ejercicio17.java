@@ -1,5 +1,3 @@
-package ProgramacionEstructurada.Ejercicios;
-
 import java.util.Scanner;
 
 public class Ejercicio17 {
