@@ -15,31 +15,34 @@ public class a14Juego {
 
         */
 
-        int numeroAleatorio = (int) (Math.random() * 101 + 1); // 1 al 100
+        int numeroAleatorio = (int) (Math.random() * 100) + 1; // 1 al 100
         int intentos = 0;
-        int intento = 0;
         int maxIntentos = 7;
-
+        int intento;
         Scanner teclado = new Scanner(System.in);
 
-        System.out.println("Esto es un juego. Se trata de adivinar del 1 al 100");
+        System.out.println("Esto es un juego. Se trata de adivinar un número del 1 al 100");
         System.out.println("Tienes " + maxIntentos + " intentos como máximo");
 
         while (intentos < maxIntentos) {
-            System.out.println("Introduce un número: ");
+            System.out.print("Introduce un número: ");
             intento = teclado.nextInt();
             intentos++;
 
             if (intento == numeroAleatorio) {
-                System.out.println("Has adivinado el número en " + intentos + " intentos.");
+                System.out.println("¡Has adivinado el número en " + intentos + " intentos!");
+                break;
             } else if (intento < numeroAleatorio) {
-                System.out.println("El numero aleatorio en realidad es mayor");
+                System.out.println("El número aleatorio es mayor.");
             } else {
-                System.out.println("El número aleatorio en realidad es menor");
+                System.out.println("El número aleatorio es menor.");
             }
             System.out.println("Intentos restantes: " + (maxIntentos - intentos));
         }
-        System.out.println("Has agotado tus " + maxIntentos + " intentos. El número era " + numeroAleatorio + ".");
+
+        if (intentos == maxIntentos) {
+            System.out.println("Has agotado tus " + maxIntentos + " intentos. El número era " + numeroAleatorio + ".");
+        }
     }
 }
 
