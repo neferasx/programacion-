@@ -1,4 +1,4 @@
-package Teoría;
+package ProgramacionEstructurada.Teoría;
 
 import java.util.Scanner;
 
@@ -18,29 +18,34 @@ public class a14Juego {
         int numeroAleatorio = (int) (Math.random() * 100) + 1; // 1 al 100
         int intentos = 0;
         int maxIntentos = 7;
-        int intento;
+        int intento = 0;
         Scanner teclado = new Scanner(System.in);
 
         System.out.println("Esto es un juego. Se trata de adivinar un número del 1 al 100");
         System.out.println("Tienes " + maxIntentos + " intentos como máximo");
 
-        while (intentos < maxIntentos) {
+        // El bucle se repite mientras no acierte y no supere los intentos
+        while (intentos < maxIntentos && intento != numeroAleatorio) {
             System.out.print("Introduce un número: ");
             intento = teclado.nextInt();
             intentos++;
 
-            if (intento == numeroAleatorio) {
-                System.out.println("¡Has adivinado el número en " + intentos + " intentos!");
-                break;
-            } else if (intento < numeroAleatorio) {
+            if (intento < numeroAleatorio) {
                 System.out.println("El número aleatorio es mayor.");
-            } else {
+            } else if (intento > numeroAleatorio) {
                 System.out.println("El número aleatorio es menor.");
+            } else {
+                System.out.println("¡Has adivinado el número en " + intentos + " intentos!");
             }
-            System.out.println("Intentos restantes: " + (maxIntentos - intentos));
+
+            // Solo mostramos los intentos restantes si aún no se ha acertado
+            if (intento != numeroAleatorio) {
+                System.out.println("Intentos restantes: " + (maxIntentos - intentos));
+            }
         }
 
-        if (intentos == maxIntentos) {
+        // Si se acabaron los intentos y no se acertó
+        if (intento != numeroAleatorio) {
             System.out.println("Has agotado tus " + maxIntentos + " intentos. El número era " + numeroAleatorio + ".");
         }
     }
