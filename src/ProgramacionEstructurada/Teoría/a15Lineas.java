@@ -11,7 +11,7 @@ public class a15Lineas {
             numero = 1; // reiniciamos el contador de números, es como si pusieramos la primera bolita
 
             while (numero <= linea) { // hace que en la línea 1, el bucle interno se ejecute una vez, en la línea 2, el bucle interno se ejecute 2 veces, así 8 veces
-                // Es como si dijera cuánt as bolitas pongo, y si estoy en la caja 3, pongo hasta boltia 3
+                // Es como si dijera cuántas bolitas pongo, y si estoy en la caja 3, pongo hasta bolita 3
                 System.out.print(numero);
                 numero++;
             }
