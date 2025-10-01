@@ -1,11 +1,10 @@
-package ProgramacionEstructurada.Ejercicios;
+package Ejercicios;
 
 import java.util.Scanner;
 
 public class Ejercicio60 {
     public static void main (String[] args) {
-
-        int decena = 1;
+        
         int numero;
 
         Scanner teclado = new Scanner(System.in);
@@ -18,12 +17,21 @@ public class Ejercicio60 {
                 numero = teclado.nextInt();
             }
 
-            decena = numero / 10;
-
-            System.out.println("El número " + numero + " pertenece a la decena " + decena);
+            if (numero<=10) {
+                System.out.println("Primera decena");
+            } else if (numero<=20) {
+                System.out.println("Segunda decena");
+            } else if (numero<=30) {
+                System.out.println("Tercera decena");
+            } else if (numero<=40) {
+                System.out.println("Cuarta decena");
+            } else {
+                System.out.println("Quinta decena");
+            }
 
         }
 
     }
 
 }
+
