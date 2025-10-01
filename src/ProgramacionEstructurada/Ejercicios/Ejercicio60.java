@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Ejercicio60 {
     public static void main (String[] args) {
-        
+
         int numero;
 
         Scanner teclado = new Scanner(System.in);
@@ -17,21 +17,26 @@ public class Ejercicio60 {
                 numero = teclado.nextInt();
             }
 
-            if (numero<=10) {
-                System.out.println("Primera decena");
-            } else if (numero<=20) {
-                System.out.println("Segunda decena");
-            } else if (numero<=30) {
-                System.out.println("Tercera decena");
-            } else if (numero<=40) {
-                System.out.println("Cuarta decena");
-            } else {
-                System.out.println("Quinta decena");
+            switch (numero/10) {
+                case 0:
+                    System.out.println("Primera decena");
+                    break;
+                case 1:
+                    System.out.println("Segunda decena");
+                    break;
+                case 2:
+                    System.out.println("Tercera decena");
+                    break;
+                case 3:
+                    System.out.println("Cuarta decena");
+                    break;
+                case 4:
+                    System.out.println("Quinta decena");
+                    break;
             }
+
 
         }
 
     }
-
-}
 
