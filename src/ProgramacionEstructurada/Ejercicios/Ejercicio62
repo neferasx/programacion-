@@ -1,0 +1,34 @@
+package Ejercicios;
+
+import java.util.Scanner;
+
+public class Ejercicio62 {
+
+    public static void main (String [] args) {
+        final int NUMERO_ALUMNOS_TIPOA = 25, NUMERO_ALUMNOS_TIPOB = 25;
+
+
+        double sumaExamenA = 0, sumaExamenB = 0, mediaExamenA, mediaExamenB;
+        double notaLeida;
+
+        Scanner teclado = new Scanner(System.in);
+
+        for (int i = 1; i <= NUMERO_ALUMNOS_TIPOA; i++) {
+            System.out.println("Nota: ");
+            notaLeida = teclado.nextDouble();
+            sumaExamenA+=notaLeida;
+        }
+        mediaExamenA = sumaExamenA / NUMERO_ALUMNOS_TIPOA;
+        System.out.println("Media examen A: " + mediaExamenA);
+
+        for (int i = 1; i <= NUMERO_ALUMNOS_TIPOB; i++) {
+            System.out.println("Nota: ");
+            notaLeida = teclado.nextDouble();
+            sumaExamenB+=notaLeida;
+        }
+        mediaExamenB = sumaExamenB / NUMERO_ALUMNOS_TIPOB;
+        System.out.println("Media examen B: " + mediaExamenB);
+
+
+    }
+}
