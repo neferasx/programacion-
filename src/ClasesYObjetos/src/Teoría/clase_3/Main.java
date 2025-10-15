@@ -17,9 +17,14 @@ public class Main {
         pokimon1.girarDerecha();
         System.out.println("Punto cardinal actual: " + pokimon1.getPuntoCardinal());
 
+        pokimon1.metodoPruebas();
+
         for(int i=0; i<100; i++) {
             pokimon1.caminar();
         }
+        pokimon1.avanzar(100);
+
+        pokimon1.getUbicacion().mostrarDatos();
 
 
         pokimon1.mostrarDatos();

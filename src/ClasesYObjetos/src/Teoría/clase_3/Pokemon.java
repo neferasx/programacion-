@@ -52,6 +52,10 @@ public class Pokemon {
         return this.puntoCardinal;
     }
 
+    public Punto1 getUbicacion() {
+        return ubicacion;
+    }
+
     public char getPuntoCardinal() {
         return puntoCardinal;
     }
@@ -87,6 +91,31 @@ public class Pokemon {
         System.out.println("Ubicación");
         this.ubicacion.mostrarDatos();
         System.out.println("Orientación:" + this.puntoCardinal);
+    }
+
+    public void avanzar (int cantidadAvanzar) {
+        switch (this.puntoCardinal) {
+            case 'N':
+                this.ubicacion.setY(this.ubicacion.getY()+cantidadAvanzar);
+                break;
+            case 'W':
+                this.ubicacion.setY(this.ubicacion.getY()+cantidadAvanzar);
+                break;
+            case 'S':
+                this.ubicacion.setY(this.ubicacion.getY()-cantidadAvanzar);
+                break;
+            case 'E':
+                this.ubicacion.setY(this.ubicacion.getY()-cantidadAvanzar);
+                break;
+        }
+    }
+    public void metodoPruebas() {
+        int numero=200000000;
+
+        while (numero>=0) {
+            metodoPruebas();
+            numero--;
+        }
     }
 }
 
