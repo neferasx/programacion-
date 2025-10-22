@@ -14,7 +14,7 @@ public class Main {
         bicicleta1 = new Bicycle(4 , 5 , 5);
 
         // Se establece la velocidad de bicicleta1 a 8
-        bicicleta1.setSpeed(8);
+        bicicleta1.speedUp(8);
         // Se obtiene la velocidad actual de bicicleta1 y se guarda en velocidadBici1
         velocidadBici1 = bicicleta1.getSpeed();
         // Se imprime la velocidad de bicicleta1 en consola
@@ -33,6 +33,10 @@ public class Main {
         marchasBici1 = bicicleta1.getGear();
         // Se imprime la marcha de bicicleta1 en consola
         System.out.println(marchasBici1);
+
+        System.out.println(bicicleta1.getID());
+
+
 
     }
 }
