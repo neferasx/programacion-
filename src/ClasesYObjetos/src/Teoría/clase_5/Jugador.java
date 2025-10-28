@@ -1,7 +1,11 @@
 package Teoría.clase_5;
 
+import java.time.LocalDate;
+
 public class Jugador {
 
+    private String nombre;
+    private LocalDate fechaNacimiento;
     private double altura;
     private double porcentajeDos;
     private double porcentajeTres;
